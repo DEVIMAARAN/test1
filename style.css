@@ -1,0 +1,844 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, hsl(74, 81%, 96%), #d0d5dd);
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner\ 3.jpeg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-color: black;
+    /* Fallback color */
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 3% 1.%;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 250px;
+    margin-left: 0;
+}
+
+.nav-links {
+    text-align: right;
+    flex: 1;
+}
+
+.nav-links ul {
+    list-style: none;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    font-size: 15px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e28a07;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: antiquewhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 60px;
+}
+
+.text-box p {
+    font-size: 20px;
+    margin: 10px 0 40px;
+
+}
+
+.visit-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: antiquewhite;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.visit-btn:hover {
+    border: 1px solid #e28a07;
+    background: #e28a07;
+    transition: 1s;
+}
+
+.header .fa-bars {
+    display: none;
+}
+
+.header fa-times {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .fa-bars {
+        display: block;
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #333;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .nav-links ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .fa-times {
+        display: block;
+        color: #fff;
+        font-size: 28px;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+    }
+}
+
+/*about us*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-left: 20px;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.container-section {
+    width: 60%;
+    /* Adjusted to provide better spacing */
+    padding-right: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.image-section {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns the image to the right */
+    align-items: center;
+    top: 0;
+    /* Aligns the image to the top of the viewport */
+    right: 0;
+    /* Aligns the image to the right of the viewport */
+    padding: 20px;
+    /* Adds some spacing between the image and the edge of the viewport */
+    z-index: 10;
+    /* Ensures the image stays on top of other elements */
+    background-color: white;
+    /* Optional: adds a background to the fixed image section */
+}
+
+.image-section img {
+    width: 405px;
+    height: 600px;
+    border-radius: 5%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adds a shadow to make it stand out */
+}
+
+.container h3 {
+    margin: 20px 0;
+    /* Adds space above and below the heading */
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.content {
+    height: 100px;
+    overflow: hidden;
+    font-size: 1rem;
+    line-height: 1.3;
+    text-align: justify;
+    color: #333;
+    transition: 0.3s;
+}
+
+.myhide {
+    height: 500px;
+    overflow: visible;
+    transition: none;
+
+    /* animation-name: my;
+          animation-duration:3s;
+          animation-iteration-count: 1; */
+
+}
+
+#btn1 {
+    display: inline-block;
+    background-color: #3d3d3d;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+#btn1:hover {
+    background-color: coral;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.social a {
+    margin-top: 40px;
+}
+
+.social a i {
+    color: #a52a2a;
+    font-size: 30px;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+
+.social a i:hover {
+    color: black;
+}
+
+@media (max-width:768px) {
+    .container {
+        width: 100%;
+        display: flex;
+        margin-left: 0px;
+        padding: 20px;
+        flex-direction: column-reverse;
+    }
+
+    .container-section {
+        padding-right: 0;
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .image-section {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto 0;
+    }
+
+    .image-section img {
+        width: 250px;
+        height: auto;
+        border-radius: 2%;
+
+    }
+
+    .container h3 {
+        margin: 20px 0;
+        /* Adds space above and below the heading */
+        color: #333;
+        font-size: 1.1rem;
+        justify-content: center;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        .title {
+            text-align: center;
+            font-size: 19px;
+        }
+
+        #btn1 {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            height: 150px;
+            /* Increase height for better readability on smaller screens */
+            font-size: 0.9rem;
+            /* Slightly smaller font size for mobile screens */
+            line-height: 1.4;
+            /* Adjust line height for readability */
+        }
+
+        .myhide {
+            height: 550px;
+            /* Increase the expanded height on smaller screens */
+            transition: none;
+            /* Ensure the transition remains disabled */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .content {
+            height: 120px;
+            /* Further adjust for very small screens */
+            font-size: 0.85rem;
+            /* Smaller font for extra small screens */
+            line-height: 1.3;
+            /* Adjust line height for readability */
+        }
+
+        .myhide {
+
+            height: 800px;
+            /* Adjust expanded height for extra small screens */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-section {
+            text-align: center;
+            /* Center-align text for better mobile view */
+        }
+
+        #btn1,
+        .social a {
+            display: block;
+            /* Makes the button and anchor tags block elements */
+            margin: 10px auto;
+            /* Centers the elements and adds some space around them */
+            text-align: center;
+            /* Center-aligns the text within the elements */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container-section {
+            text-align: center;
+            /* Ensures text is centered on smaller screens */
+        }
+
+        #btn1,
+        .social a {
+            display: block;
+            /* Ensures the button and anchor tags are block elements */
+            margin: 10px auto;
+            /* Centers the elements with some margin */
+            text-align: center;
+            /* Center-aligns the text within the elements */
+        }
+    }
+
+    /********************************/
+    .studyabroad {
+        background-color: #f5f5f5; /* Light background color */
+        padding: 80px; /* Spacing inside the div */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        max-width: 800px; /* Limit the width of the container */
+        margin-top: 50px;
+        text-align: center; /* Center text inside the container */
+    }
+    
+    .studyabroad h1 {
+        font-size: 55px; /* Font size for the heading */
+        color: #b01010; /* Dark color for the heading */
+        margin-bottom: 20px; /* Space below the heading */
+        font-weight: bold; /* Bold text */
+        line-height: 1.2; /* Line height for better readability */
+        letter-spacing: 1px; /* Slightly increased letter spacing */
+    }
+    
+    .studyabroad p {
+        font-size: 16px; /* Font size for the paragraph */
+        color: #666; /* Slightly lighter color for the text */
+        line-height: 1.6; /* Increased line height for readability */
+        margin: 0; /* Remove default margin */
+    }
+    
+    /********************************
+.country {
+    display: flex;
+    /* Enable Flexbox layout */
+    justify-content: center;
+    /* Center the items horizontally */
+    flex-wrap: wrap;
+    /* Allow wrapping of items if needed */
+    gap: 20px;
+    /* Add space between the columns */
+}
+.country {
+    display: grid;
+    /* Use CSS Grid layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 fixed columns */
+    gap: 20px;
+    /* Add space between the columns */
+    justify-content: center;
+    /* Center the grid items horizontally */
+}
+.campus-col {
+    height: 500px;
+    width: 300px;
+    flex-basis: calc(33.33% - 20px);
+    /* 3 columns with space between */
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.campus-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+    display: flex;
+    /* Centers content horizontally and vertically */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.layer:hover {
+    background: rgba(225, 9, 23, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+
+.campus-col {
+    height: 300px;
+    width: 80%;
+    /* Full width of the grid column */
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.campus {
+    grid-column: 1 / -1;
+    /* Make the campus div span all columns */
+    text-align: center;
+    /* Center the content horizontally */
+    justify-self: center;
+    /* Center the campus div itself within the grid */
+    margin: 0px;
+}
+
+/* Style for h1 */
+.campus h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.campus p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.campus-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background 0.4s;
+    display: flex;
+    /* Centers content horizontally and vertically */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.campus-col:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+.layer:hover {
+    background: rgba(225, 9, 23, 0.7);
+}
+
+.layer h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+.layer:hover h3 {
+    opacity: 1;
+    bottom: 10%;
+    cursor: pointer;
+}
+
+
+/* Media Query for Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    .country {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for medium devices */
+    }
+
+    .campus-col {
+        height: 400px;
+        /* Adjust height for medium devices */
+    }
+
+    .layer h3 {
+        font-size: 22px;
+        /* Adjust font size */
+    }
+}
+
+/* Media Query for Small Devices (Phones) */
+@media (max-width: 768px) {
+    .country {
+        grid-template-columns: 1fr;
+        /* 1 column for small devices */
+    }
+
+    .campus-col {
+        height: 300px;
+        /* Adjust height for small devices */
+    }
+
+    .layer h3 {
+        font-size: 20px;
+        /* Adjust font size */
+    }
+}
+
+/***********************/
+.Testmonials {
+    width: 80%;
+    text-align: center;
+    padding: top 100px;
+    margin: auto;
+}
+
+.test-col {
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    display: flex;
+    background: #dbcbd8;
+    cursor: pointer;
+    padding: 25px;
+    float: block;
+}
+
+h3 {
+    padding: 0%;
+    margin: 0%;
+}
+
+
+
+.test-col img {
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 10%;
+    border-radius: 50%;
+}
+
+.test-col p {
+    padding: 0%;
+    margin: 0 0 10px 0;
+}
+
+.test-col h4 {
+    margin: 0%;
+    text-align: left;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+}
+
+.reg {
+    margin: auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(11, 5, 5, 0.7), rgba(68, 34, 205, 0.836)), url(images/4LFA.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 5%;
+}
+
+.reg h1 {
+    color: #fff;
+    margin-bottom: 1px;
+    padding: 0;
+
+}
+
+.box {
+    height: 30px;
+
+}
+
+.footer {
+    margin: 50px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/bannermap.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.footer h1 {
+    font-size: 32px;
+    color: #dbcbd8;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.box {
+    margin: 50px;
+}
+
+/*************Footer**************/
+
+/*************Footer**************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: black;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.social-icons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+/*hover effect on social media icons*/
+.social-icons a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+}
+
+.social-icons a i:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-nav {
+    margin: 30px 0;
+}
+
+.footer-nav ul {
+    display: flex;
+    /* next to each other*/
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footer-nav ul li a {
+    margin: 20px;
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 1.3em;
+    opacity: 0.7;
+}
+
+.footer-nav ul li a:hover {
+    opacity: 1.2;
+    color: aliceblue;
+}
+
+.footerbottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerbottom p {
+    color: aliceblue;
+}
+
+.designer {
+    opacity: 0.8;
+    margin: 1%;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+.designer:hover {
+    color: darkkhaki;
+    opacity: 1;
+    transition: 0.5s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media(max-width:700px) {
+    .footer-nav ul {
+        flex-direction: column;
+    }
+
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}

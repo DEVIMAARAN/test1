@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in Canada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .section1 {
+            background-color: #003366;
+            padding: 20px;
+            color: white;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .root ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .root a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .root a:hover {
+            color: #ffcc00;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            background-color: #ffcc00;
+            color: #003366;
+        }
+
+        .intro {
+            width: 55%;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #003366;
+        }
+
+        .btn3 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn3:hover {
+            background-color: #ffcc00;
+            color: #003366;
+            transform: scale(1.05);
+        }
+
+        .ukimg {
+            width: 30%;
+        }
+
+        .ukimg img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section3 {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .section3 h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #003366;
+        }
+
+        .section3 h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .section3 h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .section3 p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section2 {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .intro {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .btn3 {
+                display: block;
+                width: fit-content;
+                margin: 20px auto 0;
+            }
+
+            .ukimg {
+                width: 80%;
+                margin-top: 20px;
+            }
+
+            .section3 {
+                padding: 40px 20px;
+            }
+        }
+
+        /* Flag styles */
+        .flag {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            margin: 20px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .flag img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .flag:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .flag:hover {
+            border-color: #ffcc00;
+        }
+
+        .flag:hover span {
+            color: #ffcc00;
+        }
+        
+        /* Canada Section Custom Colors */
+        .section2.canada {
+            background-color: #ff0000; /* Red for the Canadian section */
+            color: white;
+        }
+
+        .section2.canada .btn3 {
+            background-color: #003366;
+        }
+
+        .section2.canada .btn3:hover {
+            background-color: #ffcc00;
+            color: #003366;
+        }
+
+        .section2.canada .intro p {
+            color: #ffe6e6; /* Light red text */
+        }
+
+        .section2.canada .intro h2 {
+            color: #fff; /* White for headings */
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <div class="nav-container" id="country">
+            <nav class="root">
+                <ul>
+                    <li><a href="/images/alfahome.html">Home</a></li>
+                </ul>
+            </nav>
+            <a href="/uk.html" class="flag">
+                <img src="images/flag-uk.jpg" alt="UK Flag">
+                <span>UK</span>
+            </a>
+            <a href="/canada.html" class="flag">
+                <img src="/images/flag-canada.jpg" alt="Canada Flag">
+                <span>Canada</span>
+            </a>
+            <a href="/france.html" class="flag">
+                <img src="/images/flag-france.jpg" alt="France Flag">
+                <span>France</span>
+            </a>
+            <a href="/newzeland.html" class="flag">
+                <img src="/images/flag-nz.jpg" alt="New Zealand Flag">
+                <span>New Zealand</span>
+            </a>
+            <a href="/ireland.html" class="flag">
+                <img src="/images/flag-ire.png" alt="Ireland Flag">
+                <span>Ireland</span>
+            </a>
+            <a href="/australia.html" class="flag">
+                <img src="/images/flag-aus.jpg" alt="Australia Flag">
+                <span>Australia</span>
+            </a>
+        </div>
+    </section>
+    <section class="section2 canada">
+        <div class="intro">
+            <h2>Canada Education Consultants</h2>
+            <p>Studying in Canada provides an exceptional educational experience in a country renowned for its friendly atmosphere, high quality of life, and world-class institutions. With Alfa Overseas, the process of studying in Canada becomes a smooth and rewarding journey.
+
+                Canada offers a diverse range of top-tier universities and programs across various disciplines. From the picturesque landscapes to vibrant cities, studying in Canada provides both an excellent education and a unique cultural experience.</p>
+            <button class="btn3" onclick="window.location.href='https://wa.me/+447979094776';">
+                Get in Touch
+            </button>
+        </div>
+        <div class="ukimg">
+            <img src="/images/canada.jpg" alt="Canadian University">
+        </div>
+    </section>
+    <section class="section3">
+        <h1>Studying in Canada with Alfa Overseas</h1>
+        <p>Considering studying in Canada? Alfa Overseas in Mannargudi, Tamil Nadu,<br>
+            is here to assist you throughout the entire process. Here’s what you need to know:</p>
+        <h3>Academic Programs and Universities</h3>
+        <p>Canada offers a broad range of academic programs across various disciplines, including business, science, engineering, and humanities. Its universities are renowned for their academic excellence and research contributions, attracting students from all over the world.</p>
+
+        <h3>Admission Requirements</h3>
+        <p>Admission requirements vary by program. Generally, you will need:
+            Academic transcripts, proof of English proficiency (IELTS/TOEFL), and a personal statement or motivation letter.</p>
+
+        <h3>Visa Requirements</h3>
+        <p>To study in Canada, international students require a student visa. Key requirements include:
+            An offer letter from a Canadian educational institution, proof of sufficient funds, and health insurance coverage.</p>
+
+        <h3>Tuition Fees and Living Expenses</h3>
+        <p>Tuition fees in Canada vary by program and university, and it's essential to budget for living expenses as well. Costs are generally competitive, and students can find various accommodation options depending on their preferences.</p>
+
+        <h3>Scholarships and Financial Aid</h3>
+        <p>Canada offers a range of scholarships and financial aid opportunities, including:
+            Canadian Government Scholarships, University-specific scholarships, and external funding opportunities from various organizations.</p>
+
+        <h2>How Alfa Overseas Can Help</h2>
+        <p>At Alfa Overseas, we are dedicated to simplifying the study abroad process. Our expert consultants are here to assist with admission applications, visa processes, and more. Contact us today in Mannargudi, Tamil Nadu, to start your journey towards studying in Canada!</p>
+    </section>
+</body>
+</html>

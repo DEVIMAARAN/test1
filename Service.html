@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Overseas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #2C3E50;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #1ABC9C;
+            color: white;
+        }
+
+        .navbar .menu-icon {
+            display: none;
+            float: right;
+            font-size: 24px;
+            padding: 14px 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .navbar a {
+            text-align: left;
+        }
+
+        .menu-checkbox {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                float: none;
+                display: none;
+                width: 100%;
+            }
+
+            .navbar a.active {
+                display: block;
+            }
+
+            .navbar .menu-icon {
+                display: block;
+            }
+
+            .menu-checkbox:checked~a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <a href="./images/alfahome.html" class="active">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#register">Register Now</a>
+    </div>
+
+    <section class="services" id="ourservices">
+        <h1>Guiding You Through Every Step of Your Overseas Study Adventure!</h1>
+        <p>As the top-rated study abroad consultants in Tamil Nadu, we manage everything from visa applications to
+            accommodation, and all the academic requirements of your chosen institution.</p>
+        <div class="rows">
+            <div class="row">
+                <div class="category floating" data-bgcolor="#E0FBE2" data-image="images/ser1.jpg"
+                    data-content="Our Education Counselors are here to help you navigate your educational journey with personalized guidance.">
+                    <div class="image-container">
+                        <img src="/images/ser1.jpg" alt="Education Counseling Image">
+                    </div>
+                    <h3>Education Counseling</h3>
+                </div>
+                <div class="category floating" data-bgcolor="#FFD700" data-image="images/ser2.jpg"
+                    data-content="We provide comprehensive assistance in the student visa application process, making your study abroad dream come true.">
+                    <div class="image-container">
+                        <img src="/images/ser2.jpg" alt="Student Visa Application Image">
+                    </div>
+                    <h3>Student Visa Application</h3>
+                </div>
+                <div class="category floating" data-bgcolor="#FFB6C1" data-image="images/ser3.jpg"
+                    data-content="Explore a variety of scholarships available to help fund your studies abroad with our expert guidance.">
+                    <div class="image-container">
+                        <img src="/images/ser3.jpg" alt="Scholarship Guidance Image">
+                    </div>
+                    <h3>Scholarship Guidance</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="category floating" data-bgcolor="#ADD8E6" data-image="images/ser4.jpg"
+                    data-content="Our step-by-step application process will ensure you have everything in place to succeed in your study abroad ambitions.">
+                    <div class="image-container">
+                        <img src="/images/ser4.jpg" alt="Application Process Image">
+                    </div>
+                    <h3>Application Process</h3>
+                </div>
+                <div class="category floating" data-bgcolor="#98FB98" data-image="images/ser5.jpg"
+                    data-content="Find the perfect student accommodation through our extensive network of housing options tailored to your needs.">
+                    <div class="image-container">
+                        <img src="/images/ser5.jpg" alt="Student Accommodation Image">
+                    </div>
+                    <h3>Student Accommodation</h3>
+                </div>
+                <div class="category floating" data-bgcolor="#FFDEAD" data-image="images/ser6.jpg"
+                    data-content="Our global travel booking services ensure you get the best deals on flights and accommodations tailored to international students.">
+                    <div class="image-container">
+                        <img src="/images/ser6.jpg" alt="Global Travel Booking Image">
+                    </div>
+                    <h3>Global Travel Booking</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Modal Image">
+            </div>
+            <p id="modalContent"></p>
+        </div>
+    </div>
+
+    <style>
+        .services {
+            margin: auto;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            padding-top: 100px;
+            background-image: url(/images/bg7.jpg);
+            background-color: #4a0616;
+            /* Vibrant color that complements pink */
+            background-blend-mode: screen;
+            /* Blend mode to make the background color and image interact nicely */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            /* Make sure the section is fully visible */
+            overflow: hidden;
+            /* Hide overflow caused by floating circles */
+            position: relative;
+            /* Necessary for absolutely positioned elements */
+        }
+
+        .services h1 {
+            font-size: 30px;
+            font-weight: 300;
+            text-align: right;
+        }
+
+        .services p {
+            font-size: 22px;
+            width: 50%;
+            /* Set the width to cover half the screen */
+            text-align: center;
+            color: rgba(8, 7, 7, 0.818);
+            line-height: 30px;
+            padding-right: 0px;
+            margin-left: 70%;
+            /* Start from the midpoint of the screen */
+            transform: translateX(-50%);
+            /* Correct alignment by shifting the paragraph back left */
+        }
+
+        .rows {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 400px;
+            /* Adjust as necessary */
+        }
+
+        .row {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            /* Prevent interaction with circles */
+        }
+
+        .category {
+            width: 80% height: 80%;
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 10px;
+            background-color: var(--dynamic-bg, #E0FBE2);
+            /* Default fallback color */
+            text-align: center;
+            position: absolute;
+            pointer-events: auto;
+            /* Allow interaction only on the circles */
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .category h3 {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 10px 0 0 0;
+            color: #333;
+        }
+
+        .floating {
+            animation: float 10s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(20px, -30px);
+            }
+
+            50% {
+                transform: translate(-30px, 20px);
+            }
+
+            75% {
+                transform: translate(30px, 30px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .category {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 10px;
+            background-color: var(--dynamic-bg, #E0FBE2);
+            /* Default fallback color */
+            text-align: center;
+            position: absolute;
+            pointer-events: auto;
+            /* Allow interaction only on the circles */
+            animation: float 5s ease-in-out infinite;
+            /* Floating effect */
+            transition: transform 0.5s ease;
+            /* Smooth transition */
+        }
+
+        /* Adjust animation timing dynamically */
+        @keyframes move {
+            0% {
+                top: 10%;
+                left: 10%;
+            }
+
+            25% {
+                top: 20%;
+                left: 70%;
+            }
+
+            50% {
+                top: 50%;
+                left: 30%;
+            }
+
+            75% {
+                top: 80%;
+                left: 60%;
+            }
+
+            100% {
+                top: 10%;
+                left: 10%;
+            }
+        }
+
+        .category {
+            animation: move 10s infinite alternate, float 3s infinite alternate;
+        }
+
+        .category:hover .image-container img {
+            transform: scale(1.1);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1000;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-image-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+    </style>
+
+    <script>
+        // Open the modal
+        function openModal(element) {
+            const modal = document.getElementById('myModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalContent = document.getElementById('modalContent');
+
+            const category = element;
+            const imageSrc = category.getAttribute('data-image');
+            const contentText = category.getAttribute('data-content');
+
+            modalImage.src = imageSrc;
+            modalContent.textContent = contentText;
+
+            modal.style.display = "block";
+        }
+
+        // Close the modal
+        document.querySelector('.close').onclick = function () {
+            document.getElementById('myModal').style.display = "none";
+        };
+
+        // Close the modal if the user clicks anywhere outside of the modal content
+        window.onclick = function (event) {
+            const modal = document.getElementById('myModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Floating effect
+        document.querySelectorAll('.category').forEach(category => {
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 150));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 150));
+
+            category.style.left = randomX + 'px';
+            category.style.top = randomY + 'px';
+
+            category.addEventListener('mouseover', () => {
+                openModal(category);
+            });
+        });
+        // Floating effect and dynamic movement
+        document.querySelectorAll('.category').forEach(category => {
+            const randomDuration = Math.random() * 10 + 5; // Random duration between 5s and 15s
+            const randomDelay = Math.random() * 5; // Random delay up to 5s
+
+            category.style.animationDuration = `${randomDuration}s`;
+            category.style.animationDelay = `${randomDelay}s`;
+
+            category.addEventListener('mouseover', () => {
+                openModal(category);
+            });
+        });
+
+    </script>
+    <!---------contact us-->
+    <style>
+        /* Add your styles here */
+        .contact-enquire-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            /* Space between the two sections */
+            flex-wrap: wrap;
+            /* Ensure responsiveness */
+            margin: 20px auto;
+            max-width: 1200px;
+            /* Max width to prevent too wide sections */
+        }
+
+        .use,
+        .enquire-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            /* Make both sections grow equally */
+            max-width: 48%;
+            /* Adjust as needed for spacing */
+        }
+
+        .use h3,
+        .enquire-form h2 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        .use p,
+        .enquire-form label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #357abd;
+        }
+
+        .enquire-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .enquire-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .enquire-form input,
+        .enquire-form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .enquire-form button {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .enquire-form button:hover {
+            background-color: #357abd;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+    </style>
+    </head>
+
+    <body>
+        <section class="contact-enquire-container" id="contact">
+            <!-- Contact Us Section -->
+            <div class="use">
+                <h3>Contact Us</h3>
+                <p>
+                    At Alfa Overseas, we're ready to help you achieve your global education and career goals.
+                    Contact us via phone, email, or our website for personalized assistance. Visit our office or
+                    message us on social media for prompt support.
+                    <br> Reach out today, and let’s start your journey together!
+                </p>
+                <div class="contact-info">
+                    <p><strong>Phone:</strong> <a href="tel:+919677953966">+91 9677953966</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:alfaashakthi@gmail.com">alfaashakthi@gmail.com</a>
+                    </p>
+                    <p><strong>Address:</strong> 12\H, Kpa Complex, Mannargudi, H, West 3rd Street, Tiruvarur, Tamil
+                        Nadu 614001</p>
+                </div>
+                <!-- Map Section -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.394490334188!2d79.37975551428176!3d10.699554062389228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5312281b6e7f9d%3A0x5e97b88e8474f78e!2s12%2FH%2C%20KPA%20Complex%2C%20West%203rd%20Street%2C%20Mannargudi%2C%20Tamil%20Nadu%20614001!5e0!3m2!1sen!2sin!4v1634888358120!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <!-- Enquire Form Section -->
+            <div class="enquire-form">
+                <h2>Enquire Now</h2>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <script>
+            // Function to handle form submission
+            function sendEmail(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var phone = document.getElementById("phone").value;
+                var destination = document.getElementById("destination").value;
+                var message = document.getElementById("message").value;
+
+                // Create the data object with the correct property names
+                var data = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    destination: destination,
+                    message: message
+                };
+
+                emailjs.send("service_secf3ca", "template_7j7q3zi", data)
+                    .then((response) => {
+                        alert("Thanks for your enquiry!");
+                        document.getElementById("enquiryForm").reset(); // Optionally reset the form
+                    })
+                    .catch((error) => {
+                        console.error("EmailJS error:", error);
+                        alert("Oops! Something went wrong. Please try again.");
+                    });
+            }
+
+            // Attach the function to the form's submit event
+            document.getElementById("enquiryForm").addEventListener("submit", sendEmail);
+        </script>
+        <a href="https://wa.me/+447979094776" class="whatsapp-icon" target="_blank"
+            aria-label="Chat with us on WhatsApp">
+            <img src="/images/whatsapp.png" alt="WhatsApp">
+        </a>
+        <style>
+            .whatsapp-icon {
+                position: fixed;
+                bottom: 20px;
+                /* Distance from the bottom of the screen */
+                right: 20px;
+                /* Distance from the right of the screen */
+                z-index: 1000;
+                /* Ensures the icon is on top of other elements */
+                border-radius: 50%;
+                /* Rounded corners for the icon */
+                background-color: #25D366;
+                /* WhatsApp green background */
+                padding: 10px;
+                /* Space around the icon */
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                /* Optional shadow for better visibility */
+            }
+
+            .whatsapp-icon img {
+                width: 50px;
+                /* Size of the icon */
+                height: auto;
+                /* Maintain aspect ratio */
+                display: block;
+            }
+
+            /* Add to your styles.css */
+            @keyframes bounce {
+
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                40% {
+                    transform: translateY(-60px);
+                }
+
+                60% {
+                    transform: translateY(-30px);
+                }
+
+                80% {
+                    transform: translateY(-15px);
+                }
+            }
+
+            .bounce {
+                animation: bounce 5s;
+            }
+        </style>
+        <Script>
+            // scripts.js
+            document.addEventListener('DOMContentLoaded', function () {
+                const icon = document.querySelector('.whatsapp-icon');
+
+                icon.addEventListener('mouseover', function () {
+                    icon.classList.add('bounce');
+                });
+
+                icon.addEventListener('mouseout', function () {
+                    icon.classList.remove('bounce');
+                });
+            });
+
+        </Script>
+        <!-----footer-->
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            footer {
+                background-color: #34495e;
+                /* Dark Blue-Grey */
+                color: #ecf0f1;
+                /* Light Grey */
+                padding: 40px 0;
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .social-icons {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+            }
+
+            .social-icons a {
+                color: #ecf0f1;
+                /* Light Grey */
+                font-size: 24px;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .social-icons a:hover {
+                color: #e74c3c;
+                /* Red */
+            }
+
+            .footer-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .footer-nav ul li {
+                margin: 0 15px;
+            }
+
+            .footer-nav ul li a {
+                color: #ecf0f1;
+                /* Light Grey */
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .footer-nav ul li a:hover {
+                color: #e74c3c;
+                /* Red */
+            }
+
+            .footerbottom {
+                background-color: #2c3e50;
+                /* Darker Blue-Grey */
+                text-align: center;
+                padding: 10px 0;
+                color: #bdc3c7;
+                /* Soft Grey */
+            }
+
+            .footerbottom p {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            .footerbottom .designer {
+                color: #e74c3c;
+                /* Red */
+            }
+
+            @media (max-width: 768px) {
+                .footer-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .social-icons {
+                    margin-bottom: 20px;
+                }
+
+                .footer-nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .footer-nav ul li {
+                    margin: 10px 0;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .footer-container {
+                    padding: 0 10px;
+                }
+
+                .social-icons a {
+                    font-size: 20px;
+                    margin: 0 8px;
+                }
+
+                .footer-nav ul li {
+                    margin: 8px 0;
+                }
+
+                .footerbottom p {
+                    font-size: 12px;
+                }
+            }
+        </style>
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61550232830886"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#head">Home</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="footerbottom">
+            <p>&copy;2024 Alfa Overseas. All Rights Reserved.</p>
+         </div>
+    </body>
+
+</html>

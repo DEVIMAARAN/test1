@@ -12,18 +12,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        // Initialize EmailJS with your public key
         (function () {
-            emailjs.init("PuPdmPzmFR98V8JXG"); // Replace with your actual user ID
+            emailjs.init("PuPdmPzmFR98V8JXG");
         })();
     </script>
-</head>
-
-<body>
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -60,7 +57,6 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-
         }
 
         .nav-links li {
@@ -109,853 +105,109 @@
             opacity: 50%;
             background: #3765d0;
             position: relative;
-            /* Position the button absolutely within the .text-box */
-
             cursor: pointer;
             transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
             border-radius: 5px;
-            /* Rounded corners */
         }
 
         .visit-btn:hover {
             border-color: #e28a07;
             background: #6719c2;
             transform: scale(1.05);
-            /* Slightly enlarge the button on hover */
             opacity: 100%;
         }
-
 
         .slider {
             position: relative;
             width: 100%;
             height: 100vh;
-            /* Full viewport height */
             overflow: hidden;
         }
 
         .slider-wrapper {
             display: flex;
-            transition: transform 2s ease-in-out;
+            transition: transform 1s ease-in-out;
         }
 
         .slide {
             flex: 0 0 100%;
-            /* Each slide takes up full width */
         }
 
         .slide img {
             width: 100%;
-            opacity: 50%;
-            /* Ensure the image covers the full width */
             height: 100vh;
-            /* Ensure the image covers the full height */
             object-fit: cover;
-            /* Cover the entire area without distorting */
             border-radius: 0;
-            /* Remove any border radius */
             background-blend-mode: luminosity;
         }
 
         @keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
+            0% {
+                transform: translateX(50%);
+            }
 
-    16% {
-        transform: translateX(0);
-    }
+            25% {
+                transform: translateX(100%);
+            }
 
-    20% {
-        transform: translateX(-100%);
-    }
+            50% {
+                transform: translateX(-100%);
+            }
 
-    36% {
-        transform: translateX(-100%);
-    }
+            75% {
+                transform: translateX(-200%);
+            }
 
-    40% {
-        transform: translateX(-200%);
-    }
-
-    56% {
-        transform: translateX(-200%);
-    }
-
-    60% {
-        transform: translateX(-300%);
-    }
-
-    76% {
-        transform: translateX(-300%);
-    }
-
-    80% {
-        transform: translateX(-400%);
-    }
-
-    96% {
-        transform: translateX(-400%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
+            100% {
+                transform: translateX(-300%);
+            }
+        }
 
         .slider-wrapper {
-            animation: slide 10s infinite;
+            animation: slide 20s infinite;
         }
     </style>
-    </head>
-
-    <body>
-        <section class="header" id="head">
-            <div class="text-box">
-                <div class="Logo">
-                    <a href="#"><img src="ALFA (1).png" alt="Alfa Overseas Logo"></a>
-                </div>
-                <nav class="nav-links">
-                    <ul>
-                        <li class="link"><a href="/Service.html">Services</a></li>
-                        <li class="link"><a href="">FAQ</a></li>
-                        <li class="link"><a href="#country">Destination</a></li>
-                        <li class="link"><a href="#contact">Contact</a></li>
-                        <li class="link"><a href="">Gallery</a></li>
-                    </ul>
-                    <a href="/.html" class="visit-btn">View Our Brochure</a>
-                </nav>
-
-            </div>
-            <div class="slider">
-
-                <div class="slider-wrapper">
-
-                    <div class="slide">
-                        <img src="bg1.jpg" alt="Image 1">
-                    </div>
-                    <div class="slide">
-                        <img src="bg2.jpg" alt="Image 2">
-                    </div>
-                    <div class="slide">
-                        <img src="bg3 (2).jpeg" alt="Image 3">
-                    </div>
-                    <div class="slide">
-                        <img src="bg4.jpeg" alt="Image 4">
-                    </div>
-                    <div class="slide">
-                        <img src="bg5.jpeg" alt="Image 4">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!---------------------------------------------------------------->
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-                background: #f0f0f0;
-            }
-
-            .vibrant-section {
-                margin: 25px;
-                border-radius: 10px;
-                position: relative;
-                padding: 40px;
-                background: linear-gradient(135deg, #44be18, #2015c2, #e9226b);
-                color: #fff;
-                overflow: hidden;
-                text-align: center;
-            }
-
-            .vibrant-section h1 {
-                font-size: 2.5rem;
-                margin-bottom: 20px;
-            }
-
-            .vibrant-section h3 {
-                font-size: 1.5rem;
-                margin-bottom: 20px;
-            }
-
-            .vibrant-section p {
-                font-size: 1.1rem;
-                line-height: 1.6;
-                color: #f8f9fa;
-                text-align: justify;
-                max-width: 800px;
-                margin: 0 auto 30px auto;
-                /* Center the paragraph and add bottom margin */
-                padding: 0 20px;
-                /* Padding for better readability */
-                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-                /* Subtle text shadow */
-            }
-
-            .vibrant-section img {
-                width: 100%;
-                max-width: 500px;
-                height: auto;
-                border-radius: 10px;
-                margin: 20px 0;
-            }
-
-            .vibrant-section .btn {
-                display: inline-block;
-                padding: 10px 20px;
-                font-size: 1rem;
-                color: #fff;
-                background-color: #333;
-                text-decoration: none;
-                border-radius: 5px;
-                transition: background-color 0.3s;
-                text-align: center;
-                left: 50%;
-            }
-
-            .vibrant-section .btn:hover {
-                background-color: #555;
-            }
-        </style>
-
-        <section class="vibrant-section">
-
-
-            <h1>Why Should We Study Abroad?</h1>
-            <h3>Explore the World, Enhance Your Future</h3>
-            <p>
-                Studying abroad offers a unique opportunity to immerse yourself in new cultures, gaining a global
-                perspective that broadens your worldview. It allows you to access top-tier education, learning from
-                renowned
-                professors and engaging in cutting-edge research that can give you a competitive edge in your field.
-
-                Living in a foreign country pushes you out of your comfort zone, fostering personal growth,
-                independence,
-                and resilience. You'll also have the chance to learn or perfect a new language, enhancing your
-                communication
-                skills and making you more attractive to employers.
-
-                The relationships you build with people from around the world can open doors to international career
-                opportunities, while the cultural immersion enriches your life and deepens your understanding of the
-                world.
-                Studying abroad is an adventure filled with unforgettable experiences, from exploring new places to
-                creating
-                lifelong memories.
-
-                Investing in an overseas education is more than just academics—it's a transformative experience that
-                shapes
-                your future. Ready to take the leap? Your journey awaits!
-            </p>
-            <img src="students.jpg" alt="Study Abroad Image">
-
-            <img src="pic4.jpeg" alt="Study Abroad Image">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSddW4RE8rFNuVE-CVAanSzc8VH8Vkhp_wtvJty8-RvZwohnYA/viewform"
-                class="btn">Sign Up Today</a>
-        </section>
-
-        <!------About us-->
-        <section class="container" id="sakthi">
-            <div class="content-section">
-                <div class="title">
-                    <h3>Meet the Visionary Behind Alfa Overseas</h3>
-                </div>
-                <div class="content" id="shakthi">
-                    <p>
-                        Shakthivel Purushothaman is the visionary founder of Alfa Overseas, a premier consultancy
-                        dedicated
-                        to
-                        guiding students and professionals toward international success. With a career that spans
-                        medicine,
-                        literature, and entrepreneurship, Shakthivel's multifaceted talents have made him a respected
-                        figure
-                        in diverse fields.
-                        <br><br>
-                        As a leading radiotherapist, he has contributed significantly to the field of oncology, earning
-                        trust and admiration from peers and patients alike. His medical career is complemented by his
-                        literary
-                        prowess; Shakthivel is a Sahitya Akademi Award-winning writer whose poetry resonates deeply with
-                        readers, offering profound insights into the human experience.
-                        <br><br>
-                        Alfa Overseas, founded under his leadership, has emerged as a trusted partner for students
-                        aiming to
-                        study in countries like the United Kingdom, Singapore, Dubai, Canada, and New Zealand. The
-                        consultancy
-                        also extends its expertise to professionals seeking global employment opportunities.
-                        Shakthivel’s
-                        dedication to excellence and his clients' success has firmly established Alfa Overseas as a
-                        leader
-                        in
-                        the field.
-                    </p>
-                    <button id="btn1">Read More</button>
-                </div>
-            </div>
-            <div class="image-section">
-                <img src="shakthi (2).jpg" alt="Shakthivel Purushothaman">
-            </div>
-        </section>
-
-        <style>
-            .container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                background: linear-gradient(135deg, #090908d2, #050208);
-                padding: 20px;
-                border-radius: 15px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            }
-
-            .content-section {
-                flex: 1;
-                padding: 20px;
-                color: #f0f0f0;
-            }
-
-            .title h3 {
-                font-size: 30px;
-                margin-bottom: 20px;
-                color: #c0b6b6;
-            }
-
-            .content p {
-                font-size: 18px;
-                line-height: 1.8;
-            }
-
-            #btn1 {
-                margin-top: 20px;
-                padding: 12px 24px;
-                font-size: 16px;
-                background-color: #f5a623;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
-
-            #btn1:hover {
-                background-color: #4a90e2;
-                color: #fff;
-            }
-
-            .social a {
-                margin: 0 10px;
-                color: #f0f0f0;
-                font-size: 26px;
-                transition: color 0.3s ease;
-            }
-
-            .social a:hover {
-                color: #f5a623;
-            }
-
-            .image-section {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .image-section img {
-                max-width: 100%;
-                border-radius: 15px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            }
-        </style>
-
-        <script>
-            document.getElementById("btn1").addEventListener("click", function () {
-                window.location.href = "https://www.facebook.com/sakthivelpurushothaman";
-            });
-        </script>
-
-        <!--------------countries-->
-        <nav class="flag-nav" id="country">
-            <a href="/uk.html" class="flag">
-                <img src="flag-uk.jpg" alt="UK Flag">
-                <span>UK</span>
-            </a>
-            <a href="/canada.html" class="flag">
-                <img src="flag-canada.jpg" alt="Canada Flag">
-                <span>Canada</span>
-            </a>
-            <a href="/france.html" class="flag">
-                <img src="flag-france.jpg" alt="France Flag">
-                <span>France</span>
-            </a>
-            <a href="/newzeland.html" class="flag">
-                <img src="flag-nz.jpg" alt="New Zealand Flag">
-                <span>New Zealand</span>
-            </a>
-            <a href="/ireland.html" class="flag">
-                <img src="flag-ire.png" alt="Ireland Flag">
-                <span>Ireland</span>
-            </a>
-            <a href="#" class="flag">
-                <img src="flag-aus.jpg" alt="Australia Flag">
-                <span>Australia</span>
-            </a>
-        </nav>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f0f0f0;
-            }
-
-            .flag-nav {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
-                background-color: #9e0963;
-                border-radius: 10px;
-                margin-top: 10px;
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-
-            .flag {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                text-decoration: none;
-                color: #fff;
-            }
-
-            .flag img {
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                border: 3px solid #fff;
-                object-fit: cover;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            }
-
-            .flag span {
-                margin-top: 8px;
-                font-weight: bold;
-            }
-        </style>
-    </body>
-
-</html>
-
-<!---------contact us-->
-<style>
-    /* Add your styles here */
-    .contact-enquire-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        /* Space between the two sections */
-        flex-wrap: wrap;
-        /* Ensure responsiveness */
-        margin: 20px auto;
-        max-width: 1200px;
-        /* Max width to prevent too wide sections */
-    }
-
-    .use,
-    .enquire-form {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        flex: 1;
-        /* Make both sections grow equally */
-        max-width: 48%;
-        /* Adjust as needed for spacing */
-    }
-
-    .use h3,
-    .enquire-form h2 {
-        color: #4a90e2;
-        margin-bottom: 20px;
-    }
-
-    .use p,
-    .enquire-form label {
-        font-size: 18px;
-        color: #333;
-    }
-
-    .contact-info p {
-        margin: 10px 0;
-    }
-
-    .contact-info a {
-        color: #4a90e2;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-
-    .contact-info a:hover {
-        color: #357abd;
-    }
-
-    .enquire-form form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .enquire-form label {
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    .enquire-form input,
-    .enquire-form textarea {
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    .enquire-form button {
-        padding: 10px 20px;
-        background-color: #4a90e2;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .enquire-form button:hover {
-        background-color: #357abd;
-    }
-
-    .map-container {
-        margin-top: 20px;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .map-container iframe {
-        width: 100%;
-        height: 300px;
-        border: 0;
-    }
-</style>
 </head>
 
 <body>
-    <section class="contact-enquire-container" id="contact">
-        <!-- Contact Us Section -->
-        <div class="use">
-            <h3>Contact Us</h3>
-            <p>
-                At Alfa Overseas, we're ready to help you achieve your global education and career goals.
-                Contact us via phone, email, or our website for personalized assistance. Visit our office or
-                message us on social media for prompt support.
-                <br> Reach out today, and let’s start your journey together!
-            </p>
-            <div class="contact-info">
-                <p><strong>Phone:</strong> <a href="tel:+919677953966">+91 9677953966</a></p>
-                <p><strong>Email:</strong> <a href="mailto:alfaashakthi@gmail.com">alfaashakthi@gmail.com</a>
-                </p>
-                <p><strong>Address:</strong> 12\H, Kpa Complex, Mannargudi, H, West 3rd Street, Tiruvarur, Tamil
-                    Nadu 614001</p>
+    <section class="header" id="head">
+        <!----------navigation---------------->
+        <div class="text-box">
+            <div class="Logo">
+                <a href="#"><img src="images/ALFA (1).png" alt="Alfa Overseas Logo"></a>
             </div>
-            <!-- Map Section -->
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.394490334188!2d79.37975551428176!3d10.699554062389228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5312281b6e7f9d%3A0x5e97b88e8474f78e!2s12%2FH%2C%20KPA%20Complex%2C%20West%203rd%20Street%2C%20Mannargudi%2C%20Tamil%20Nadu%20614001!5e0!3m2!1sen!2sin!4v1634888358120!5m2!1sen!2sin"
-                    allowfullscreen="" loading="lazy"></iframe>
-            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li class="link"><a href="/Service.html">Services</a></li>
+                    <li class="link"><a href="">FAQ</a></li>
+                    <li class="link"><a href="#country">Destination</a></li>
+                    <li class="link"><a href="#contact">Contact</a></li>
+                    <li class="link"><a href="">Gallery</a></li>
+                </ul>
+                <a href="/.html" class="visit-btn">View Our Brochure</a>
+            </nav>
         </div>
-        <!-- Enquire Form Section -->
-        <div class="enquire-form">
-            <h2>Enquire Now</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone:</label>
-                <input type="phone" id="phone" name="phone" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
+        <!----------slider images---------------->
+        <div class="slider">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="images/bg1.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="images/bg2.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="images/bg3 (2).jpeg" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="images/bg4.jpeg" alt="Image 4">
+                </div>
+                <div class="slide">
+                    <img src="images/bg5.jpeg" alt="Image 5">
+                </div>
+            </div>
         </div>
     </section>
-    <script>
-        // Function to handle form submission
-        function sendEmail(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById("phone").value;
-            var message = document.getElementById("message").value;
-
-            // Create the data object with the correct property names
-            var data = {
-                name: name,
-                email: email,
-                phone: phone,
-                destination: destination,
-                message: message
-            };
-
-            emailjs.send("service_secf3ca", "template_7j7q3zi", data)
-                .then((response) => {
-                    alert("Thanks for your enquiry!");
-                    document.getElementById("enquiryForm").reset(); // Optionally reset the form
-                })
-                .catch((error) => {
-                    console.error("EmailJS error:", error);
-                    alert("Oops! Something went wrong. Please try again.");
-                });
-        }
-
-        // Attach the function to the form's submit event
-        document.getElementById("enquiryForm").addEventListener("submit", sendEmail);
-    </script>
-    <a href="https://wa.me/+447979094776" class="whatsapp-icon" target="_blank" aria-label="Chat with us on WhatsApp">
-        <img src="whatsapp.png" alt="WhatsApp">
-    </a>
-    <style>
-        .whatsapp-icon {
-            position: fixed;
-            bottom: 20px;
-            /* Distance from the bottom of the screen */
-            right: 20px;
-            /* Distance from the right of the screen */
-            z-index: 1000;
-            /* Ensures the icon is on top of other elements */
-            border-radius: 50%;
-            /* Rounded corners for the icon */
-            background-color: #25D366;
-            /* WhatsApp green background */
-            padding: 10px;
-            /* Space around the icon */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            /* Optional shadow for better visibility */
-        }
-
-        .whatsapp-icon img {
-            width: 50px;
-            /* Size of the icon */
-            height: auto;
-            /* Maintain aspect ratio */
-            display: block;
-        }
-
-        /* Add to your styles.css */
-        @keyframes bounce {
-
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                transform: translateY(0);
-            }
-
-            40% {
-                transform: translateY(-60px);
-            }
-
-            60% {
-                transform: translateY(-30px);
-            }
-
-            80% {
-                transform: translateY(-15px);
-            }
-        }
-
-        .bounce {
-            animation: bounce 5s;
-        }
-    </style>
-    <Script>
-        // scripts.js
-        document.addEventListener('DOMContentLoaded', function () {
-            const icon = document.querySelector('.whatsapp-icon');
-
-            icon.addEventListener('mouseover', function () {
-                icon.classList.add('bounce');
-            });
-
-            icon.addEventListener('mouseout', function () {
-                icon.classList.remove('bounce');
-            });
-        });
-
-    </Script>
-    <!-----footer-->
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        footer {
-            background-color: #34495e;
-            /* Dark Blue-Grey */
-            color: #ecf0f1;
-            /* Light Grey */
-            padding: 40px 0;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .social-icons a {
-            color: #ecf0f1;
-            /* Light Grey */
-            font-size: 24px;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: #e74c3c;
-            /* Red */
-        }
-
-        .footer-nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .footer-nav ul li {
-            margin: 0 15px;
-        }
-
-        .footer-nav ul li a {
-            color: #ecf0f1;
-            /* Light Grey */
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-nav ul li a:hover {
-            color: #e74c3c;
-            /* Red */
-        }
-
-        .footerbottom {
-            background-color: #2c3e50;
-            /* Darker Blue-Grey */
-            text-align: center;
-            padding: 10px 0;
-            color: #bdc3c7;
-            /* Soft Grey */
-        }
-
-        .footerbottom p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        .footerbottom .designer {
-            color: #e74c3c;
-            /* Red */
-        }
-
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .social-icons {
-                margin-bottom: 20px;
-            }
-
-            .footer-nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-nav ul li {
-                margin: 10px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .footer-container {
-                padding: 0 10px;
-            }
-
-            .social-icons a {
-                font-size: 20px;
-                margin: 0 8px;
-            }
-
-            .footer-nav ul li {
-                margin: 8px 0;
-            }
-
-            .footerbottom p {
-                font-size: 12px;
-            }
-        }
-    </style>
-
-
-    <footer>
-        <div class="footer-container">
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61550232830886"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="#head">Home</a></li>
-                    <li><a href="#">Destinations</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    <div class="footerbottom">
-        <p>&copy;2024 Alfa Overseas. All Rights Reserved.</p>
-    </div>
 </body>
 
 </html>

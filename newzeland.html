@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in New Zealand</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .section1 {
+            background-color: #003366;
+            padding: 20px;
+            color: white;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .root ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .root a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .root a:hover {
+            color: #ffcc00;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            background-color: #ffcc00;
+            color: #003366;
+        }
+
+        .intro {
+            width: 55%;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #003366;
+        }
+
+        .btn3 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn3:hover {
+            background-color: #ffcc00;
+            color: #003366;
+            transform: scale(1.05);
+        }
+
+        .ukimg {
+            width: 30%;
+        }
+
+        .ukimg img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section3 {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .section3 h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #003366;
+        }
+
+        .section3 h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .section3 h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .section3 p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section2 {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .intro {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .btn3 {
+                display: block;
+                width: fit-content;
+                margin: 20px auto 0;
+            }
+
+            .ukimg {
+                width: 80%;
+                margin-top: 20px;
+            }
+
+            .section3 {
+                padding: 40px 20px;
+            }
+        }
+
+        /* Flag styles */
+        .flag {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            margin: 20px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .flag img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .flag:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .flag:hover {
+            border-color: #ffcc00;
+        }
+
+        .flag:hover span {
+            color: #ffcc00;
+        }
+        
+        /* New Zealand Section Custom Colors */
+        .section2.newzeland {
+            background-color: #0033a0; /* Blue for the New Zealand section */
+            color: white;
+        }
+
+        .section2.newzeland .btn3 {
+            background-color: #ffcc00; /* Yellow button */
+        }
+
+        .section2.newzeland .btn3:hover {
+            background-color: #0033a0;
+            color: #ffcc00;
+        }
+
+        .section2.newzeland .intro p {
+            color: #f4f4f9; /* Light gray text */
+        }
+
+        .section2.newzeland .intro h2 {
+            color: #fff; /* White for headings */
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <div class="nav-container" id="country">
+            <nav class="root">
+                <ul>
+                    <li><a href="/images/alfahome.html">Home</a></li>
+                </ul>
+            </nav>
+            <a href="/uk.html" class="flag">
+                <img src="images/flag-uk.jpg" alt="UK Flag">
+                <span>UK</span>
+            </a>
+            <a href="/canada.html" class="flag">
+                <img src="/images/flag-canada.jpg" alt="Canada Flag">
+                <span>Canada</span>
+            </a>
+            <a href="/france.html" class="flag">
+                <img src="/images/flag-france.jpg" alt="France Flag">
+                <span>France</span>
+            </a>
+            <a href="/newzeland.html" class="flag">
+                <img src="/images/flag-nz.jpg" alt="New Zealand Flag">
+                <span>New Zealand</span>
+            </a>
+            <a href="/ireland.html" class="flag">
+                <img src="/images/flag-ire.png" alt="Ireland Flag">
+                <span>Ireland</span>
+            </a>
+            <a href="/australia.html" class="flag">
+                <img src="/images/flag-aus.jpg" alt="Australia Flag">
+                <span>Australia</span>
+            </a>
+        </div>
+    </section>
+    <section class="section2 newzeland">
+        <div class="intro">
+            <h2>New Zealand Education Consultants</h2>
+            <p>Studying in New Zealand provides an excellent opportunity to experience a high-quality education in a stunning and welcoming environment. With Alfa Overseas, you will receive comprehensive support throughout your educational journey in New Zealand.
+
+                New Zealand is renowned for its exceptional universities and diverse academic programs. The country offers a vibrant cultural experience along with top-notch education, making it an ideal destination for international students.</p>
+            <button class="btn3" onclick="window.location.href='https://wa.me/+447979094776';">
+                Get in Touch
+            </button>
+        </div>
+        <div class="ukimg">
+            <img src="/images/newzealand.jpg" alt="New Zealand University">
+        </div>
+    </section>
+    <section class="section3">
+        <h1>Studying in New Zealand with Alfa Overseas</h1>
+        <p>Are you considering studying in New Zealand? Alfa Overseas in Mannargudi, Tamil Nadu,<br>
+            is here to assist you throughout the entire process. Here’s what you need to know:</p>
+        <h3>Academic Programs and Universities</h3>
+        <p>New Zealand offers a diverse range of academic programs in fields such as science, engineering, business, and the arts. The country is known for its world-class universities and research facilities, providing students with excellent educational opportunities.</p>
+
+        <h3>Admission Requirements</h3>
+        <p>Admission requirements may vary depending on the program, but generally include:
+            Academic transcripts, proof of English proficiency (e.g., IELTS or TOEFL), and a personal statement outlining your goals and motivations.</p>
+
+        <h3>Visa Requirements</h3>
+        <p>To study in New Zealand, you will need a student visa. Requirements typically include:
+            An acceptance letter from a New Zealand institution, proof of sufficient funds to cover tuition and living expenses, and health insurance coverage.</p>
+
+        <h3>Tuition Fees and Living Expenses</h3>
+        <p>Tuition fees in New Zealand are relatively reasonable compared to other Western countries. However, living expenses can vary depending on the city. It's important to budget accordingly and consider accommodation options.</p>
+
+        <h3>Scholarships and Financial Aid</h3>
+        <p>New Zealand offers a variety of scholarships and financial aid opportunities, including:
+            New Zealand Government Scholarships, university-specific scholarships, and funding from various external organizations.</p>
+
+        <h2>How Alfa Overseas Can Help</h2>
+        <p>At Alfa Overseas, we are committed to making your study abroad experience in New Zealand as seamless as possible. Our knowledgeable consultants are here to guide you through the admission process, visa applications, and more. Contact us today in Mannargudi, Tamil Nadu, to start your journey in New Zealand!</p>
+    </section>
+  </body>
+</html>
